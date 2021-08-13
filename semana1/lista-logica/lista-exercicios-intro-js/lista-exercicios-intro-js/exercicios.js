@@ -107,8 +107,7 @@ function retornaStringEmMaiuscula(string) {
 // EXERCÍCIO 07
 function calculaIngressosEspetaculo(custo, valorIngresso) {
   // implemente sua lógica aqui
-  // Escreva uma função que recebe o custo de um espetáculo de teatro e o valor de cada ingresso (considere que todos os ingressos têm o mesmo preço) e retorna quantos ingressos precisam ser vendidos para que o espetáculo não dê prejuízo.
-  // Incompleto
+  return custo / valorIngresso;
 }
 
 // EXERCÍCIO 08
@@ -147,7 +146,10 @@ function trocaPrimeiroEUltimo(array) {
   let primeiroElemento = array[0];
   let ultimoElemento = array[array.length - 1];
 
-  // Incompleto
+  array[0] = ultimoElemento;
+  array[array.length - 1] = primeiroElemento;
+
+  return array;
 }
 
 // trocaPrimeiroEUltimo();
@@ -155,11 +157,7 @@ function trocaPrimeiroEUltimo(array) {
 // EXERCÍCIO 12
 function checaIgualdadeDesconsiderandoCase(string1, string2) {
   // implemente sua lógica aqui
-  const comparacao = string1 === string2;
-
-  return comparacao;
-
-  // Imcompleto
+  return string1.toLowerCase() === string2.toLowerCase();
 }
 
 // checaIgualdadeDesconsiderandoCase();
