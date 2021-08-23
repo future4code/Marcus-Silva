@@ -94,11 +94,11 @@ function retornaChamadaDeFilme(filme) {
 
 // EXERCÍCIO 12
 function retornaPessoaAnonimizada(pessoa) {
-  // let pessoaAnonima = {
-  //   ...pessoa,
-  //   nome: "ANÔNIMO",
-  // };
-  // return pessoaAnonima;
+  let pessoaAnonima = {
+    ...pessoa,
+    nome: "ANÔNIMO",
+  };
+  return pessoaAnonima;
 }
 
 // const validarPessoa = (pessoa) =>
