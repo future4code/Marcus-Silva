@@ -101,12 +101,12 @@ function retornaPessoaAnonimizada(pessoa) {
   return pessoaAnonima;
 }
 
-// const validarPessoa = (pessoa) =>
-//   pessoa.altura > 1.5 && pessoa.idade > 14 && pessoa.idade < 60;
+const validarPessoa = (pessoa) =>
+  pessoa.altura > 1.5 && pessoa.idade > 14 && pessoa.idade < 60;
 
 // EXERCÍCIO 13A
 function retornaPessoasAutorizadas(pessoas) {
-  // return pessoas.filter(validarPessoa);
+  return pessoas.filter(validarPessoa);
 }
 
 // EXERCÍCIO 13B
