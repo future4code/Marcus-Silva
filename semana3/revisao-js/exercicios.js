@@ -111,7 +111,7 @@ function retornaPessoasAutorizadas(pessoas) {
 
 // EXERCÍCIO 13B
 function retornaPessoasNaoAutorizadas(pessoas) {
-  // return pessoas.filter((pessoa) => !validarPessoa(pessoa));
+  return pessoas.filter((pessoa) => !validarPessoa(pessoa));
 }
 
 // EXERCÍCIO 14
