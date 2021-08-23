@@ -42,12 +42,12 @@ function retornaMaiorNumero(array) {
 
 // EXERCÍCIO 07
 function retornaObjetoEntreDoisNumeros(num1, num2) {
-  // const [menor, maior] = retornaArrayOrdenado([num1, num2]);
-  // return {
-  //   maiorNumero: maior,
-  //   maiorDivisivelPorMenor: maior % menor === 0,
-  //   diferenca: maior - menor,
-  // };
+  const [menor, maior] = retornaArrayOrdenado([num1, num2]);
+  return {
+    maiorNumero: maior,
+    maiorDivisivelPorMenor: maior % menor === 0,
+    diferenca: maior - menor,
+  };
 }
 
 // EXERCÍCIO 08
