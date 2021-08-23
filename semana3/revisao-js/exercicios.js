@@ -61,16 +61,16 @@ function retornaNPrimeirosPares(n) {
 
 // EXERCÍCIO 09
 function classificaTriangulo(ladoA, ladoB, ladoC) {
-  // let lado1 = ladoA;
-  // let lado2 = ladoB;
-  // let lado3 = ladoC;
-  // if (lado1 === lado2 && lado1 === lado3) {
-  //   return "Equilátero";
-  // } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
-  //   return "Isósceles";
-  // } else if (lado1 !== lado2 && lado1 !== lado3) {
-  //   return "Escaleno";
-  // }
+  let lado1 = ladoA;
+  let lado2 = ladoB;
+  let lado3 = ladoC;
+  if (lado1 === lado2 && lado1 === lado3) {
+    return "Equilátero";
+  } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+    return "Isósceles";
+  } else if (lado1 !== lado2 && lado1 !== lado3) {
+    return "Escaleno";
+  }
 }
 
 // EXERCÍCIO 10
