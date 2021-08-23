@@ -52,11 +52,11 @@ function retornaObjetoEntreDoisNumeros(num1, num2) {
 
 // EXERCÍCIO 08
 function retornaNPrimeirosPares(n) {
-  // const resultado = [];
-  // for (let i = 0; i < n; i++) {
-  //   resultado[i] = 2 * i;
-  // }
-  // return resultado;
+  const resultado = [];
+  for (let i = 0; i < n; i++) {
+    resultado[i] = 2 * i;
+  }
+  return resultado;
 }
 
 // EXERCÍCIO 09
