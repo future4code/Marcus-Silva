@@ -28,11 +28,11 @@ function retornaNumerosPares(array) {
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
-  // let numerosParesElevados = [];
-  // for (let i = 0; i < array.length; i++) {
-  //   if (array[i] % 2 === 0) numerosParesElevados.push(array[i] ** 2);
-  // }
-  // return numerosParesElevados;
+  let numerosParesElevados = [];
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] % 2 === 0) numerosParesElevados.push(array[i] ** 2);
+  }
+  return numerosParesElevados;
 }
 
 // EXERCÍCIO 06
