@@ -133,16 +133,16 @@ function retornaArrayOrdenadoAlfabeticamente(consultas) {
 
 // EXERCÍCIO 15B
 function retornaArrayOrdenadoPorData(consultas) {
-  // const gerarData = (string) => {
-  //   const [dia, mes, ano] = string.split("/");
-  //   return new Date(`${ano}-${mes}-${dia}`);
-  // };
-  // const compararDatasDeConsulta = (a, b) => {
-  //   if (gerarData(a.dataDaConsulta) > gerarData(b.dataDaConsulta)) {
-  //     return 1;
-  //   } else {
-  //     return -1;
-  //   }
-  // };
-  // return consultas.sort(compararDatasDeConsulta);
+  const gerarData = (string) => {
+    const [dia, mes, ano] = string.split("/");
+    return new Date(`${ano}-${mes}-${dia}`);
+  };
+  const compararDatasDeConsulta = (a, b) => {
+    if (gerarData(a.dataDaConsulta) > gerarData(b.dataDaConsulta)) {
+      return 1;
+    } else {
+      return -1;
+    }
+  };
+  return consultas.sort(compararDatasDeConsulta);
 }
