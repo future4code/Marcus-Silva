@@ -127,8 +127,8 @@ function retornaContasComSaldoAtualizado(contas) {
 
 // EXERCÍCIO 15A
 function retornaArrayOrdenadoAlfabeticamente(consultas) {
-  // const compararNomesDeConsulta = (a, b) => (a.nome > b.nome ? 1 : -1);
-  // return consultas.sort(compararNomesDeConsulta);
+  const compararNomesDeConsulta = (a, b) => (a.nome > b.nome ? 1 : -1);
+  return consultas.sort(compararNomesDeConsulta);
 }
 
 // EXERCÍCIO 15B
