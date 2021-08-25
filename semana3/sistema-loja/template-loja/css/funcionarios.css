@@ -1,0 +1,110 @@
+:root {
+  --primary-color: #282657;
+  --secondary-color: #875dd9;
+  --tertiary-color: #c06bae;
+  --text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: revert;
+  color: var(--tertiary-color);
+}
+
+/* Header */
+header {
+  padding: 3em 0.5em;
+  text-align: center;
+}
+
+header h1 {
+  font-size: calc(2rem + 2vmin);
+}
+
+header h1 em {
+  color: var(--tertiary-color);
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 4em 0;
+}
+
+nav .destaque {
+  color: var(--tertiary-color);
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav a {
+    padding: 15px 0;
+  }
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1em;
+  margin-top: 3em;
+}
+
+/* Lista com nome dos funcionários */
+ul {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  list-style: none;
+}
+
+ul li {
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  padding: 4em 0;
+}
+
+footer p {
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+footer div {
+  text-align: center;
+}
+
+footer div img {
+  padding: 0 1em;
+  height: 2em;
+  max-width: 100%;
+}
