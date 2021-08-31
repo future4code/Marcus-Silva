@@ -99,3 +99,15 @@ img {
   place-content: center;
   padding: 50px;
 }
+
+@media screen and (max-width: 964px) {
+  .container-video video {
+    width: 648px;
+  }
+}
+
+@media screen and (max-width: 724px) {
+  .container-video video {
+    width: 324px;
+  }
+}
