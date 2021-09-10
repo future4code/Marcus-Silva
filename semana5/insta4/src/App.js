@@ -31,6 +31,11 @@ class App extends React.Component {
           fotoUsuario={Robot2}
           fotoPost={Hummingbird}
         />
+        <Post
+          nomeUsuario={"Bot 2"}
+          fotoUsuario={Robot2}
+          fotoPost={Hummingbird}
+        />
       </MainContainer>
     );
   }
