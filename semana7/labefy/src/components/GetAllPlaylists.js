@@ -40,8 +40,7 @@ export default class GetAllPlaylists extends React.Component {
   };
 
   deletePlaylist = (id) => {
-    const url =
-      "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/:playlistId";
+    const url = `https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists/${id}`;
 
     axios
       .delete(url, {
