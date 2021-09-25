@@ -3,7 +3,6 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import CreatePlaylist from "./components/CreatePlaylist";
 import GetAllPlaylists from "./components/GetAllPlaylists";
-import axios from "axios";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
@@ -26,34 +25,30 @@ const GlobalStyle = createGlobalStyle`
 
 export default class App extends React.Component {
   state = {
-    currentScreen: "criarNomeDaPlaylists",
-    createdPlaylists: [],
+    currentScreen: "createPlaylist",
   };
 
-  componentDidMount() {
-    this.createPlaylist();
-  }
+  changeCurrentScreen = () => {
+    switch (this.state.currentScreen) {
+      case "createPlaylist":
+        return (
+          <CreatePlaylist goToAllPlaylists={this.goToGetAllPlaylistsScreen} />
+        );
+      case "allPlaylists":
+        return (
+          <GetAllPlaylists goToCreatePlaylist={this.goToCreatePlaylistScreen} />
+        );
+      default:
+        return <p>The requested url was not found on this server.</p>;
+    }
+  };
 
-  createPlaylist = async () => {
-    const url =
-      "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists";
+  goToCreatePlaylistScreen = () => {
+    this.setState({ currentScreen: "createPlaylist" });
+  };
 
-    const body = {
-      name: "",
-    };
-
-    axios
-      .post(url, body, {
-        headers: {
-          Authorization: "marcus-silva-maryam",
-        },
-      })
-      .then((res) => {
-        console.log(res.data);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
+  goToGetAllPlaylistsScreen = () => {
+    this.setState({ currentScreen: "allPlaylists" });
   };
 
   render() {
@@ -67,6 +62,7 @@ export default class App extends React.Component {
             aqui mesmo.
           </p>
         </header>
+        {this.changeCurrentScreen()}
       </div>
     );
   }
