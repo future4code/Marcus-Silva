@@ -1,5 +1,16 @@
 import axios from "axios";
 import React from "react";
+import styled from "styled-components";
+
+const PlaylistCard = styled.div`
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin: 10px;
+  width: 450px;
+`;
 
 export default class GetAllPlaylists extends React.Component {
   state = {
@@ -21,10 +32,10 @@ export default class GetAllPlaylists extends React.Component {
         },
       })
       .then((res) => {
-        this.setState({ allPlaylistsCreated: res.data.results });
+        this.setState({ allPlaylistsCreated: res.data.result.list });
       })
       .catch((err) => {
-        alert("Error! Please, try again.");
+        alert("Ocorreu um erro ao tentar acessar as playlists criadas.");
       });
   };
 
@@ -40,10 +51,10 @@ export default class GetAllPlaylists extends React.Component {
       })
       .then((res) => {
         this.getAllPlaylists();
-        alert("Playlist excluída");
+        alert("Playlist excluída.");
       })
       .catch((err) => {
-        alert("Error! Please, try again.");
+        alert("Ocorreu um erro ao tentar remover essa playlist.");
       });
   };
 
@@ -51,12 +62,12 @@ export default class GetAllPlaylists extends React.Component {
     console.log(this.state.allPlaylistsCreated);
     const listOfPlaylists = this.state.allPlaylistsCreated.map((playlist) => {
       return (
-        <div key={playlist}>
+        <PlaylistCard key={playlist}>
           {playlist.name}
           <button onClick={() => this.deletePlaylist(playlist.id)}>
-            Delete
+            Remover
           </button>
-        </div>
+        </PlaylistCard>
       );
     });
 
@@ -67,7 +78,7 @@ export default class GetAllPlaylists extends React.Component {
             Clique no botão abaixo para visualizar sua playlist. Em seguida,
             adicione suas músicas favoritas.
           </h3>
-          <button>Playlists</button>
+          <button onClick={this.getAllPlaylists}>Playlists</button>
         </div>
 
         <div>{listOfPlaylists}</div>
