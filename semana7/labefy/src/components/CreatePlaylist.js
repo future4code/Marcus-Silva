@@ -13,6 +13,8 @@ export default class CreatePlaylist extends React.Component {
   };
 
   createYourPlaylist = () => {
+    console.log(this.state);
+
     const url =
       "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists";
 
@@ -44,7 +46,7 @@ export default class CreatePlaylist extends React.Component {
             value={this.state.playlistName}
             onChange={this.handlePlaylistName}
           />
-          <button>Criar playlist</button>
+          <button onClick={this.createYourPlaylist}>Criar playlist</button>
         </div>
 
         <div>
