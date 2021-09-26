@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import styled from "styled-components";
+import PlaylistDetails from "./PlaylistDetails";
 
 const PlaylistCard = styled.div`
   border: 2px solid #000;
@@ -10,6 +11,11 @@ const PlaylistCard = styled.div`
   padding: 10px;
   margin: 10px;
   width: 450px;
+`;
+
+const Box = styled.div`
+  display: flex;
+  gap: 25px;
 `;
 
 export default class GetAllPlaylists extends React.Component {
@@ -63,9 +69,13 @@ export default class GetAllPlaylists extends React.Component {
       return (
         <PlaylistCard key={playlist}>
           {playlist.name}
-          <button onClick={() => this.deletePlaylist(playlist.id)}>
-            Remover
-          </button>
+
+          <Box>
+            <button>Detalhes</button>
+            <button onClick={() => this.deletePlaylist(playlist.id)}>
+              Remover
+            </button>
+          </Box>
         </PlaylistCard>
       );
     });

@@ -3,6 +3,7 @@ import { createGlobalStyle } from "styled-components";
 import styled from "styled-components";
 import CreatePlaylist from "./components/CreatePlaylist";
 import GetAllPlaylists from "./components/GetAllPlaylists";
+import PlaylistDetails from "./components/PlaylistDetails";
 
 const GlobalStyle = createGlobalStyle`
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
