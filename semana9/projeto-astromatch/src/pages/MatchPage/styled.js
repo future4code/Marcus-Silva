@@ -33,6 +33,7 @@ export const Button = styled.button`
   color: #fff;
   overflow: hidden;
   position: relative;
+  margin-bottom: 10px;
 
   &:hover {
     background-color: #c06bae;
@@ -54,4 +55,11 @@ export const Button = styled.button`
     transform: translateX(100%) rotate(-45deg);
     transition: all 0.4s ease-out 50ms;
   }
+`;
+
+export const BtnCtnMatchePage = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 260px;
 `;

@@ -15,13 +15,17 @@ export const Card = styled.div`
   justify-content: center;
   flex-direction: column;
   text-align: center;
+
+  p {
+    margin: 10px 0;
+  }
 `;
 
 export const ImgProfile = styled.img`
   max-width: 100%;
   height: 300px;
   text-align: center;
-  margin-bottom: 15px;
+  margin: 25px 0;
 `;
 
 export const Button = styled.button`
@@ -60,13 +64,6 @@ export const Button = styled.button`
   }
 `;
 
-export const ButtonContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 5px;
-`;
-
 export const BtnIconContainer = styled.div`
   display: flex;
   align-items: center;
@@ -83,4 +80,10 @@ export const ButtonIcon = styled.button`
   font-weight: 700;
   width: 30px;
   height: 30px;
+`;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
 `;

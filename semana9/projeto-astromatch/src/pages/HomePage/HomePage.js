@@ -15,6 +15,10 @@ const HomePage = (props) => {
   const [choosePerson, setChoosePerson] = useState({});
 
   useEffect(() => {
+    selectProfile();
+  }, [choosePerson]);
+
+  const selectProfile = () => {
     axios
       .get(
         "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcus-silva-maryam/person"
@@ -26,7 +30,7 @@ const HomePage = (props) => {
       .catch((err) => {
         alert(err);
       });
-  }, [choosePerson]);
+  };
 
   const btnMatch = (choose) => {
     const url =
@@ -41,7 +45,6 @@ const HomePage = (props) => {
       .post(url, body)
       .then((res) => {
         setChoosePerson(res.data);
-
         console.log(res.data);
       })
       .catch((err) => {
@@ -75,7 +78,6 @@ const HomePage = (props) => {
         <Button onClick={() => props.changePage("matchPage")}>
           Ir para matches
         </Button>
-        <Button>Limpar matches</Button>
       </ButtonContainer>
     </div>
   );
