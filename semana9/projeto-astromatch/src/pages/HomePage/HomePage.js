@@ -1,27 +1,75 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   Button,
   ButtonContainer,
   ButtonIcon,
   BtnIconContainer,
+  ImgProfile,
 } from "./styled";
 import { FaHeart } from "react-icons/fa";
+import axios from "axios";
 
 const HomePage = (props) => {
+  const [chooseProfile, setChooseProfile] = useState({});
+  const [choosePerson, setChoosePerson] = useState({});
+
+  useEffect(() => {
+    axios
+      .get(
+        "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcus-silva-maryam/person"
+      )
+      .then((res) => {
+        setChooseProfile(res.data.profile);
+        console.log(res.data.profile);
+      })
+      .catch((err) => {
+        alert(err);
+      });
+  }, [choosePerson]);
+
+  const btnMatch = (choose) => {
+    const url =
+      "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcus-silva-maryam/choose-person";
+
+    const body = {
+      id: chooseProfile.id,
+      choice: choose,
+    };
+
+    axios
+      .post(url, body)
+      .then((res) => {
+        setChoosePerson(res.data);
+
+        console.log(res.data);
+      })
+      .catch((err) => {
+        alert("Ocorreu um erro!");
+      });
+  };
+
   return (
     <div>
-      <Card>
-        <img src={"https://picsum.photos/300"} />
-        <h3>Name</h3>
-        <p>Something</p>
-        <BtnIconContainer>
-          {/* <button> */}
-          <FaHeart color="#c06bae" size={30} cursor="pointer" />
-          {/* </button> */}
-          <ButtonIcon>X</ButtonIcon>
-        </BtnIconContainer>
-      </Card>
+      {chooseProfile ? (
+        <Card>
+          <ImgProfile src={chooseProfile.photo} alt="Imagens aleatórias" />
+
+          <h3>{chooseProfile.name}</h3>
+          <p>{chooseProfile.bio}</p>
+          <BtnIconContainer>
+            <FaHeart
+              color="#c06bae"
+              size={30}
+              cursor="pointer"
+              onClick={() => btnMatch(true)}
+            />
+            <ButtonIcon onClick={() => btnMatch(false)}>X</ButtonIcon>
+          </BtnIconContainer>
+        </Card>
+      ) : (
+        <p>Acabaram os perfis.</p>
+      )}
 
       <ButtonContainer>
         <Button onClick={() => props.changePage("matchPage")}>

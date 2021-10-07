@@ -3,11 +3,25 @@ import styled from "styled-components";
 export const Card = styled.div`
   background-color: rgba(255, 255, 255, 0.15);
   border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(30px);
   border-radius: 6px;
-  text-align: center;
   margin-bottom: 45px;
   padding: 35px;
-  backdrop-filter: blur(30px);
+  width: 400px;
+  height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+`;
+
+export const ImgProfile = styled.img`
+  max-width: 100%;
+  height: 300px;
+  text-align: center;
+  margin-bottom: 15px;
 `;
 
 export const Button = styled.button`
@@ -37,12 +51,12 @@ export const Button = styled.button`
     height: 100%;
     width: 100%;
     transform: translateX(-100%) rotate(-45deg);
-    transition: all 0.6s ease-in 50ms;
+    transition: all 0.4s ease-in 50ms;
   }
 
   &:hover:before {
     transform: translateX(100%) rotate(-45deg);
-    transition: all 0.5s ease-out 50ms;
+    transition: all 0.4s ease-out 50ms;
   }
 `;
 
@@ -50,6 +64,7 @@ export const ButtonContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 5px;
 `;
 
 export const BtnIconContainer = styled.div`
@@ -57,7 +72,7 @@ export const BtnIconContainer = styled.div`
   align-items: center;
   justify-content: center;
   gap: 25px;
-  margin-top: 15px;
+  margin-top: 5px;
 `;
 
 export const ButtonIcon = styled.button`
