@@ -25,7 +25,6 @@ const HomePage = (props) => {
       )
       .then((res) => {
         setChooseProfile(res.data.profile);
-        console.log(res.data.profile);
       })
       .catch((err) => {
         alert(err);
@@ -45,7 +44,6 @@ const HomePage = (props) => {
       .post(url, body)
       .then((res) => {
         setChoosePerson(res.data);
-        console.log(res.data);
       })
       .catch((err) => {
         alert("Ocorreu um erro!");

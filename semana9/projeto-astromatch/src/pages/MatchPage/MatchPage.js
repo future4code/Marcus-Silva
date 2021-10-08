@@ -9,7 +9,6 @@ const MatchPage = (props) => {
 
   useEffect(() => {
     listMatches();
-    clearMatches();
   }, []);
 
   const listMatches = () => {
@@ -19,7 +18,6 @@ const MatchPage = (props) => {
       )
       .then((res) => {
         setGetMathches(res.data.matches);
-        console.log(res.data.matches);
       })
       .catch((err) => {
         alert(err.response);
@@ -41,8 +39,8 @@ const MatchPage = (props) => {
         "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/marcus-silva-maryam/clear"
       )
       .then((res) => {
-        setClear(res.data.matches);
-        console.log(res.data.matches);
+        listMatches();
+        alert("Você limpou todos os seu matches.");
       })
       .catch((err) => {
         alert(err.response);
