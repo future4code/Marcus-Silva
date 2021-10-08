@@ -5,7 +5,6 @@ import { Profiles, Button, ImagesProfiles, BtnCtnMatchePage } from "./styled";
 
 const MatchPage = (props) => {
   const [getMatches, setGetMathches] = useState([]);
-  const [clear, setClear] = useState({});
 
   useEffect(() => {
     listMatches();
@@ -26,7 +25,7 @@ const MatchPage = (props) => {
 
   const listAllMatches = getMatches.map((item) => {
     return (
-      <Profiles>
+      <Profiles key={item.id}>
         <ImagesProfiles src={item.photo} alt="Imagens aleatórias" />
         <p>{item.name}</p>
       </Profiles>
