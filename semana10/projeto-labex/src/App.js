@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { createGlobalStyle } from "styled-components";
 import Header from "./components/Header/Header";
 import HomePage from "./pages/HomePage/HomePage";
-// import ListTripsPage from "./pages/ListTripsPage/ListTripsPage";
 
 const GlobalStyle = createGlobalStyle`
   * {
