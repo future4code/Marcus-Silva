@@ -7,10 +7,10 @@ const ListTripsPage = () => {
       <Header />
 
       <div>
-        <h3>
+        <p>
           Veja algumas dicas de Viagens Espaciais e aproveite para fazer a sua
           inscrição
-        </h3>
+        </p>
 
         <button>Inscreva-se</button>
       </div>
