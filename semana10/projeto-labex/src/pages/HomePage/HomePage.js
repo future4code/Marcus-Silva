@@ -32,7 +32,9 @@ const HomePage = () => {
           <BtnViagens onClick={() => history.push("/listTripsPage")}>
             Ver Viagens
           </BtnViagens>
-          <BtnAdmin>Área de Admin</BtnAdmin>
+          <BtnAdmin onClick={() => history.push("/loginPage")}>
+            Área de Admin
+          </BtnAdmin>
         </ContainerBtns>
       </ContainerLeft>
 

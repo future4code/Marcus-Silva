@@ -54,7 +54,7 @@ export const ContainerBtns = styled.div`
 
 export const BtnViagens = styled.button`
   background-color: var(--primary-color);
-  font-size: 1em;
+  font-size: 1.2rem;
   padding: 0.5em 2em;
   border: none;
   outline: 0;
@@ -64,7 +64,7 @@ export const BtnViagens = styled.button`
 
 export const BtnAdmin = styled.button`
   background-color: var(--primary-color);
-  font-size: 1em;
+  font-size: 1.2rem;
   padding: 0.5em 2em;
   border: none;
   outline: 0;

@@ -5,6 +5,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import ListTripsPage from "./pages/ListTripsPage/ListTripsPage";
 import PageNotFound from "./pages/PageNotFound";
 import ApplicationFormPage from "./pages/ApplicationFormPage/ApplicationFormPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import TripDetailsPage from "./pages/TripDetailsPage/TripDetailsPage";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -49,6 +51,14 @@ const App = () => {
             component={ApplicationFormPage}
           >
             <ApplicationFormPage />
+          </Route>
+
+          <Route path="/loginPage" exact component={LoginPage}>
+            <LoginPage />
+          </Route>
+
+          <Route path="/tripDetailsPage" exact component={TripDetailsPage}>
+            <TripDetailsPage />
           </Route>
 
           <Route>
