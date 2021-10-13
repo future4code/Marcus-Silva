@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import { createGlobalStyle } from "styled-components";
-import Header from "./components/Header/Header";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
+import ListTripsPage from "./pages/ListTripsPage/ListTripsPage";
+import PageNotFound from "./pages/PageNotFound";
+import ApplicationFormPage from "./pages/ApplicationFormPage/ApplicationFormPage";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -27,28 +30,33 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
-  const [currentPage, setCurrentPage] = useState("home");
-
-  const choosePage = () => {
-    switch (currentPage) {
-      case "home":
-        return <HomePage changePage={changePage} />;
-      case "listTrips":
-        return <Header changePage={changePage} />;
-      default:
-        return <HomePage changePage={changePage} />;
-    }
-  };
-
-  const changePage = (pageName) => {
-    setCurrentPage(pageName);
-  };
-
   return (
-    <div>
-      <GlobalStyle />
-      {choosePage()}
-    </div>
+    <Router>
+      <div>
+        <GlobalStyle />
+        <Switch>
+          <Route path="/" exact component={HomePage}>
+            <HomePage />
+          </Route>
+
+          <Route path="/listTripsPage" exact component={ListTripsPage}>
+            <ListTripsPage />
+          </Route>
+
+          <Route
+            path="/applicationFormPage"
+            exact
+            component={ApplicationFormPage}
+          >
+            <ApplicationFormPage />
+          </Route>
+
+          <Route>
+            <PageNotFound path="*" exatc component={PageNotFound} />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 };
 

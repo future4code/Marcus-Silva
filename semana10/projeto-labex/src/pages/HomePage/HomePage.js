@@ -12,8 +12,11 @@ import {
   Span,
 } from "./styled";
 import rocket from "../../img/rocket-outer-space.svg";
+import { useHistory } from "react-router";
 
-const HomePage = (props) => {
+const HomePage = () => {
+  let history = useHistory();
+
   return (
     <Div>
       <ContainerLeft>
@@ -26,7 +29,7 @@ const HomePage = (props) => {
         </P>
 
         <ContainerBtns>
-          <BtnViagens onClick={() => props.changePage("listTrips")}>
+          <BtnViagens onClick={() => history.push("/listTripsPage")}>
             Ver Viagens
           </BtnViagens>
           <BtnAdmin>Área de Admin</BtnAdmin>

@@ -1,7 +1,10 @@
 import React from "react";
 import Header from "../../components/Header/Header";
+import { useHistory } from "react-router";
 
 const ListTripsPage = () => {
+  let history = useHistory();
+
   return (
     <div>
       <Header />
@@ -12,7 +15,9 @@ const ListTripsPage = () => {
           inscrição
         </p>
 
-        <button>Inscreva-se</button>
+        <button onClick={() => history.push("/applicationFormPage")}>
+          Inscreva-se
+        </button>
       </div>
 
       <div>

@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../../components/Header/Header";
 import rocketTwo from "../../img/viagem-to-the-moon.svg";
 import { RocketTwoImg } from "./styled";
 
 const ApplicationFormPage = () => {
   return (
     <div>
+      <Header />
       <div>
         <p>
           Peencha o formulário lorem Ipsum is simply dummy text of the printing
