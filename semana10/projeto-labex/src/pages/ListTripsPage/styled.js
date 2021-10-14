@@ -8,8 +8,8 @@ export const CtnListTripsPage = styled.div`
 
 export const CtnListTripsPageLeft = styled.div`
   width: 50%;
-  background-color: #f8f8f8;
-  padding: 6em 2em;
+  // background-color: #f8f8f8;
+  padding: 6em 3.6em;
 `;
 
 export const BtnInscrevase = styled.button`
@@ -20,6 +20,10 @@ export const BtnInscrevase = styled.button`
   outline: 0;
   border-radius: 25px;
   color: #fff;
+`;
+
+export const H3 = styled.h3`
+  margin-bottom: 35px;
 `;
 
 export const CtnListTripsPageRight = styled.div`
