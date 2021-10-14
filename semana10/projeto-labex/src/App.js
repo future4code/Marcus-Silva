@@ -29,6 +29,12 @@ const GlobalStyle = createGlobalStyle`
   button {
     cursor: pointer;
   }
+
+  input {
+    font-size: 1.5rem;
+    padding: 0.2em 0.3em;
+    width: 360px;
+  }
 `;
 
 const App = () => {
