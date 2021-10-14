@@ -6,6 +6,7 @@ import {
   CtnListTripsPage,
   CtnListTripsPageLeft,
   CtnListTripsPageRight,
+  H3,
 } from "./styled";
 import axios from "axios";
 
@@ -36,10 +37,11 @@ const ListTripsPage = () => {
       <Header />
       <CtnListTripsPage>
         <CtnListTripsPageLeft>
-          <p>
+          <H3>
             Veja algumas dicas de Viagens Espaciais e aproveite para fazer a sua
-            inscrição
-          </p>
+            inscrição clicando no botão abaixo que irá direcioná-lo para a
+            página do formulário
+          </H3>
 
           <BtnInscrevase onClick={() => history.push("/applicationFormPage")}>
             Inscreva-se
