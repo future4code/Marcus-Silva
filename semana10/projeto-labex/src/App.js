@@ -31,8 +31,8 @@ const GlobalStyle = createGlobalStyle`
   }
 
   input {
-    font-size: 1.5rem;
-    padding: 0.2em 0.3em;
+    font-size: 1.2rem;
+    padding: 0.6em 0.4em;
     width: 360px;
   }
 `;

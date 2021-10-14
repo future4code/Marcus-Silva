@@ -12,7 +12,7 @@ import axios from "axios";
 
 const ListTripsPage = () => {
   const history = useHistory();
-  const [listTrips, setListTrips] = useState("{}");
+  const [listTrips, setListTrips] = useState([]);
 
   useEffect(() => {
     getTrips();
@@ -24,13 +24,35 @@ const ListTripsPage = () => {
         "https://us-central1-labenu-apis.cloudfunctions.net/labeX/marcus-silva-maryam/trips"
       )
       .then((res) => {
-        // setListTrips(res.data);
-        console.log(res.data);
+        setListTrips(res.data.trips);
+        console.log(res.data.trips);
       })
       .catch((err) => {
-        alert(err.response);
+        alert(err);
       });
   };
+
+  const getListTrips = listTrips.map((item) => {
+    return (
+      <CtnListTripsPageRight>
+        <p>
+          <b>Nome:</b> {item.name}
+        </p>
+        <p>
+          <b>Descrição:</b> {item.description}
+        </p>
+        <p>
+          <b>Planeta:</b> {item.planet}
+        </p>
+        <p>
+          <b>Duração em dias:</b> {item.durationInDays}
+        </p>
+        <p>
+          <b>Data:</b> {item.date}
+        </p>
+      </CtnListTripsPageRight>
+    );
+  });
 
   return (
     <div>
@@ -48,9 +70,16 @@ const ListTripsPage = () => {
           </BtnInscrevase>
         </CtnListTripsPageLeft>
 
-        <CtnListTripsPageRight>
-          <div>hello</div>
-        </CtnListTripsPageRight>
+        <div>
+          {/* <div>
+            <p>Nome: {listTrips.name}</p>
+            <p>Descrição: {listTrips.description}</p>
+            <p>Planeta: {listTrips.planet}</p>
+            <p>Duração em dias: {listTrips.durationInDays}</p>
+            <p>Data: {listTrips.date}</p>
+          </div> */}
+          {getListTrips}
+        </div>
       </CtnListTripsPage>
     </div>
   );

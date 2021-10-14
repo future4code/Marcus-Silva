@@ -28,4 +28,8 @@ export const H3 = styled.h3`
 
 export const CtnListTripsPageRight = styled.div`
   width: 50%;
+  margin-bottom: 25px;
+  border: 2px solid #333;
+  border-radius: 25px;
+  padding: 1em;
 `;
