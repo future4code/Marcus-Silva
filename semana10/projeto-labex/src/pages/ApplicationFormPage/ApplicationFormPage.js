@@ -1,45 +1,75 @@
 import React from "react";
 import Header from "../../components/Header/Header";
 import rocketTwo from "../../img/viagem-to-the-moon.svg";
-import { RocketTwoImg } from "./styled";
+import {
+  BtnFormEnviar,
+  CtnFormPage,
+  CtnFormPageLeft,
+  CtnFormPageRight,
+  DivInput,
+  H3Form,
+  H3FormToo,
+  RocketTwoImg,
+} from "./styled";
 
 const ApplicationFormPage = () => {
   return (
     <div>
       <Header />
-      <div>
-        <p>
-          Peencha o formulário lorem Ipsum is simply dummy text of the printing
-          and typesetting industry
-        </p>
+      <CtnFormPage>
+        <CtnFormPageLeft>
+          <H3Form>
+            Precisamos que você informe alguns dados pessoais e qual lugar do
+            espaço deseja conhecer
+          </H3Form>
 
-        <RocketTwoImg src={rocketTwo} />
-      </div>
+          <RocketTwoImg src={rocketTwo} />
+        </CtnFormPageLeft>
 
-      <div>
-        <h3>Inscreva-se para uma viagem</h3>
+        <CtnFormPageRight>
+          <H3FormToo>Inscreva-se para uma viagem</H3FormToo>
 
-        <select>
-          <option>Planeta 1</option>
-          <option>Planeta 2</option>
-          <option>Planeta 3</option>
-          <option>Galáxia 1</option>
-          <option>Galáxia 2</option>
-          <option>Galáxia 3</option>
-        </select>
+          <DivInput>
+            <select>
+              <option>Planeta 1</option>
+              <option>Planeta 2</option>
+              <option>Planeta 3</option>
+              <option>Galáxia 1</option>
+              <option>Galáxia 2</option>
+              <option>Galáxia 3</option>
+            </select>
+          </DivInput>
 
-        <input placeholder="Nome" type="text" />
-        <input placeholder="Idade" type="number" />
-        <input placeholder="Altura" type="text" />
-        <input placeholder="Profissão" type="text" />
+          <DivInput>
+            <input placeholder="Nome" type="text" />
+          </DivInput>
 
-        <select>
-          <option>Texto</option>
-          <option>Texto</option>
-          <option>Texto</option>
-          <option>Texto</option>
-        </select>
-      </div>
+          <DivInput>
+            <input placeholder="Idade" type="number" />
+          </DivInput>
+
+          <DivInput>
+            <input placeholder="Altura" type="text" />
+          </DivInput>
+
+          <DivInput>
+            <input placeholder="Profissão" type="text" />
+          </DivInput>
+
+          <DivInput>
+            <select>
+              <option>Texto</option>
+              <option>Texto</option>
+              <option>Texto</option>
+              <option>Texto</option>
+            </select>
+          </DivInput>
+
+          <DivInput>
+            <BtnFormEnviar>Enviar</BtnFormEnviar>
+          </DivInput>
+        </CtnFormPageRight>
+      </CtnFormPage>
     </div>
   );
 };
