@@ -26,7 +26,7 @@ const ApplicationFormPage = () => {
 
     const body = {
       name: "",
-      age: "",
+      age: 0,
       applicationText: "",
       profession: "",
       country: "",
@@ -62,7 +62,7 @@ const ApplicationFormPage = () => {
 
             <DivInput>
               <select>
-                <option defaultValue disabled>
+                <option selected disabled>
                   Destino
                 </option>
                 <option>Planeta 1</option>
@@ -100,7 +100,7 @@ const ApplicationFormPage = () => {
 
             <DivInput>
               <select value={applyForm.country}>
-                <option defaultValue disabled>
+                <option selected disabled>
                   Escolha um País
                 </option>
                 <option>Brasil</option>
