@@ -1,15 +1,21 @@
 import styled from "styled-components";
 
 export const CtnListTripsPage = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media screen and (max-width: 998px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 export const CtnListTripsPageLeft = styled.div`
-  width: 50%;
-  // background-color: #f8f8f8;
-  padding: 6em 3.6em;
+  padding: 3.5em 3.6em;
+
+  @media screen and (max-width: 998px) {
+    text-align: center;
+  }
 `;
 
 export const BtnInscrevase = styled.button`
@@ -27,9 +33,23 @@ export const H3 = styled.h3`
 `;
 
 export const CtnListTripsPageRight = styled.div`
-  width: 50%;
-  margin-bottom: 25px;
-  border: 2px solid #333;
-  border-radius: 25px;
+  // background-color: pink;
+  padding: 2em 2em;
+`;
+
+export const CardsTrips = styled.div`
+  border: 1px solid #000;
+  border-radius: 3px;
   padding: 1em;
+  margin: 25px auto;
+  width: 22em;
+  color: var(--tertiary-color);
+`;
+
+export const P = styled.p`
+  margin: 12px;
+`;
+
+export const B = styled.b`
+  color: #000;
 `;

@@ -6,7 +6,10 @@ import {
   CtnListTripsPage,
   CtnListTripsPageLeft,
   CtnListTripsPageRight,
+  CardsTrips,
   H3,
+  B,
+  P,
 } from "./styled";
 import axios from "axios";
 
@@ -34,23 +37,23 @@ const ListTripsPage = () => {
 
   const getListTrips = listTrips.map((item) => {
     return (
-      <CtnListTripsPageRight>
-        <p>
-          <b>Nome:</b> {item.name}
-        </p>
-        <p>
-          <b>Descrição:</b> {item.description}
-        </p>
-        <p>
-          <b>Planeta:</b> {item.planet}
-        </p>
-        <p>
-          <b>Duração em dias:</b> {item.durationInDays}
-        </p>
-        <p>
-          <b>Data:</b> {item.date}
-        </p>
-      </CtnListTripsPageRight>
+      <CardsTrips>
+        <P>
+          <B>Nome:</B> {item.name}
+        </P>
+        <P>
+          <B>Descrição:</B> {item.description}
+        </P>
+        <P>
+          <B>Planeta:</B> {item.planet}
+        </P>
+        <P>
+          <B>Duração em dias:</B> {item.durationInDays}
+        </P>
+        <P>
+          <B>Data:</B> {item.date}
+        </P>
+      </CardsTrips>
     );
   });
 
@@ -70,16 +73,7 @@ const ListTripsPage = () => {
           </BtnInscrevase>
         </CtnListTripsPageLeft>
 
-        <div>
-          {/* <div>
-            <p>Nome: {listTrips.name}</p>
-            <p>Descrição: {listTrips.description}</p>
-            <p>Planeta: {listTrips.planet}</p>
-            <p>Duração em dias: {listTrips.durationInDays}</p>
-            <p>Data: {listTrips.date}</p>
-          </div> */}
-          {getListTrips}
-        </div>
+        <CtnListTripsPageRight>{getListTrips}</CtnListTripsPageRight>
       </CtnListTripsPage>
     </div>
   );
