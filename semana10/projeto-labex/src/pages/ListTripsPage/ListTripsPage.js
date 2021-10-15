@@ -28,7 +28,6 @@ const ListTripsPage = () => {
       )
       .then((res) => {
         setListTrips(res.data.trips);
-        console.log(res.data.trips);
       })
       .catch((err) => {
         alert(err);

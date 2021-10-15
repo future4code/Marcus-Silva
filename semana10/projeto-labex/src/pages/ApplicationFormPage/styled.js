@@ -77,4 +77,5 @@ export const BtnFormEnviar = styled.button`
   outline: 0;
   border-radius: 25px;
   color: #fff;
+  margin-top: 15px;
 `;

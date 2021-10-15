@@ -35,6 +35,12 @@ const GlobalStyle = createGlobalStyle`
     padding: 0.6em 0.4em;
     width: 360px;
   }
+
+  select {
+    font-size: 1.2rem;
+    padding: 0.6em 0.4em;
+    width: 360px;
+  }
 `;
 
 const App = () => {
