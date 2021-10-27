@@ -3,8 +3,11 @@ import React from "react";
 import { BASE_URL } from "../../constants/urls";
 import useProtectedPage from "../../hooks/useProtectedPage";
 import {
+  BtnPost,
+  BtnPostBox,
   Card,
   FeedPaegContainer,
+  InputComments,
   Interactions,
   LikeDislike,
   TextPost,
@@ -30,9 +33,9 @@ const FeedPage = () => {
     <FeedPaegContainer>
       <div>
         <WriteYourPost placeholder="Escreva o seu post"></WriteYourPost>
-        <div>
-          <button>Postar</button>
-        </div>
+        <BtnPostBox>
+          <BtnPost>Postar</BtnPost>
+        </BtnPostBox>
       </div>
 
       <Card>
@@ -46,7 +49,7 @@ const FeedPage = () => {
           <p>Comentários</p>
         </Interactions>
 
-        <p>Deixe seu comentário</p>
+        <InputComments placeholder="Deixei seu comentário" />
       </Card>
     </FeedPaegContainer>
   );

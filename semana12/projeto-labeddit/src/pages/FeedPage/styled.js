@@ -18,9 +18,22 @@ export const WriteYourPost = styled.textarea`
   border-radius: 3px;
 `;
 
+export const BtnPostBox = styled.div`
+  width: 380px;
+  margin-bottom: 1.5em;
+`;
+
+export const BtnPost = styled.button`
+  width: 100%;
+
+  &:hover {
+    background-color: var(--secondaryColor);
+  }
+`;
+
 export const Card = styled.div`
   width: 380px;
-  height: 260px;
+  height: auto;
   border: 1px solid #000;
   margin: 1.5em 0;
   border-radius: 3px;
@@ -31,6 +44,7 @@ export const User = styled.p`
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #000;
@@ -49,6 +63,9 @@ export const Interactions = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 0.4em 0.3em;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #000;
 `;
 
 export const LikeDislike = styled.div`
@@ -56,4 +73,11 @@ export const LikeDislike = styled.div`
   align-items: center;
   justify-content: center;
   gap: 15px;
+`;
+
+export const InputComments = styled.input`
+  font-size: 1rem;
+  width: 100%;
+  padding: 0.3em;
+  border: none;
 `;
