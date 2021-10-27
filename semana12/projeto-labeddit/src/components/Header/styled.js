@@ -18,10 +18,10 @@ export const Title = styled.a`
 `;
 
 export const BtnSignHeader = styled.button`
+  text-align: center;
   background-color: transparent;
   color: var(--primaryColor);
   transition: all 0.6s ease-in, transform 0.2s ease-out;
-  margin-right: 10px;
 
   &:hover {
     transform: translateY(-2px);
@@ -37,5 +37,11 @@ export const BtnSignUpHeader = styled.button`
 `;
 
 export const Nav = styled.nav`
-  text-align: center;
+  display: flex;
+  gap: 10px;
+
+  @media screen and (max-width: 526px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;

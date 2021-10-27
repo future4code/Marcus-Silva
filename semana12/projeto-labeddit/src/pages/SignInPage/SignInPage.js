@@ -3,12 +3,12 @@ import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 import SignInForm from "./SignInForm";
 import { SignInPageContainer } from "./styled";
 
-const SignInPage = () => {
+const SignInPage = ({ setButtonSignOut }) => {
   useUnprotectedPage();
 
   return (
     <SignInPageContainer>
-      <SignInForm />
+      <SignInForm setButtonSignOut={setButtonSignOut} />
     </SignInPageContainer>
   );
 };

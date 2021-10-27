@@ -4,7 +4,7 @@ import useForm from "../../hooks/useForm";
 import { signUp } from "../../services/user";
 import { useHistory } from "react-router";
 
-const SignUpForm = () => {
+const SignUpForm = ({ setButtonSignOut }) => {
   const history = useHistory();
 
   const [form, onChange, clear] = useForm({
@@ -16,7 +16,7 @@ const SignUpForm = () => {
   const onSubmitForm = (event) => {
     event.preventDefault();
     console.log(form);
-    signUp(form, clear, history);
+    signUp(form, clear, history, setButtonSignOut);
   };
 
   return (

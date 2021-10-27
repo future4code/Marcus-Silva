@@ -2,7 +2,7 @@ import axios from "axios";
 import { BASE_URL } from "../constants/urls";
 import { goToFeedPage } from "../routes/coordinator";
 
-export const signIn = (body, clear, history) => {
+export const signIn = (body, clear, history, setButtonSignOut) => {
   axios
     .post(`${BASE_URL}/users/login`, body)
     .then((res) => {
@@ -10,13 +10,14 @@ export const signIn = (body, clear, history) => {
       localStorage.setItem("token", res.data.token);
       clear();
       goToFeedPage(history);
+      setButtonSignOut("Sign Out");
     })
     .catch((err) => {
-      alert(err.response);
+      alert(err.response.data.message);
     });
 };
 
-export const signUp = (body, clear, history) => {
+export const signUp = (body, clear, history, setButtonSignOut) => {
   axios
     .post(`${BASE_URL}/users/signup`, body)
     .then((res) => {
@@ -24,9 +25,9 @@ export const signUp = (body, clear, history) => {
       localStorage.setItem("token", res.data.token);
       clear();
       goToFeedPage(history);
+      setButtonSignOut("Sign Out");
     })
     .catch((err) => {
-      // alert(err.response);
-      console.log(err.response);
+      alert(err.response.data.message);
     });
 };

@@ -13,8 +13,23 @@ import {
   Title,
 } from "./styled";
 
-const Header = () => {
+const Header = ({ buttonSignOut, setButtonSignOut }) => {
+  const token = localStorage.getItem("token");
   const history = useHistory();
+
+  const signout = () => {
+    localStorage.removeItem("token");
+  };
+
+  const buttonSignOutAction = () => {
+    if (token) {
+      signout();
+      setButtonSignOut("Sign In");
+      goToSignInPage(history);
+    } else {
+      goToSignInPage(history);
+    }
+  };
 
   return (
     <HeaderContainer>
@@ -24,12 +39,14 @@ const Header = () => {
       </div>
 
       <Nav>
-        <BtnSignHeader onClick={() => goToSignInPage(history)}>
-          Sign In
+        <BtnSignHeader onClick={buttonSignOutAction}>
+          {buttonSignOut}
         </BtnSignHeader>
-        <BtnSignUpHeader onClick={() => goToSignUpPage(history)}>
-          Sign Up
-        </BtnSignUpHeader>
+        {!token && (
+          <BtnSignUpHeader onClick={() => goToSignUpPage(history)}>
+            Sign Up
+          </BtnSignUpHeader>
+        )}
       </Nav>
     </HeaderContainer>
   );

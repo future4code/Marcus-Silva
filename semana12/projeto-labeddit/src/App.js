@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
+import { BrowserRouter } from "react-router-dom";
 import { createGlobalStyle } from "styled-components";
+import Header from "./components/Header/Header";
 import Router from "./routes/Router";
 
 const GlobalStyle = createGlobalStyle`
@@ -41,11 +43,20 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
+  const token = localStorage.getItem("token");
+  const [buttonSignOut, setButtonSignOut] = useState(
+    token ? "Sign Out" : "Sign In"
+  );
+
   return (
-    <div>
+    <BrowserRouter>
       <GlobalStyle />
-      <Router />
-    </div>
+      <Header
+        buttonSignOut={buttonSignOut}
+        setButtonSignOut={setButtonSignOut}
+      />
+      <Router setButtonSignOut={setButtonSignOut} />
+    </BrowserRouter>
   );
 };
 

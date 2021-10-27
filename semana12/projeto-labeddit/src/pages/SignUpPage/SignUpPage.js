@@ -3,13 +3,13 @@ import { SignUpPageContainer } from "./styled";
 import SignUpForm from "./SignUpForm";
 import useUnprotectedPage from "../../hooks/useUnprotectedPage";
 
-const SignUpPage = () => {
+const SignUpPage = ({ setButtonSignOut }) => {
   useUnprotectedPage();
 
   return (
     <div>
       <SignUpPageContainer>
-        <SignUpForm />
+        <SignUpForm setButtonSignOut={setButtonSignOut} />
       </SignUpPageContainer>
     </div>
   );

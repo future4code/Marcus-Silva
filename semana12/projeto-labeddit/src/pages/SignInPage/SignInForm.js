@@ -4,13 +4,13 @@ import useForm from "../../hooks/useForm";
 import { signIn } from "../../services/user";
 import { useHistory } from "react-router";
 
-const SignInForm = () => {
+const SignInForm = ({ setButtonSignOut }) => {
   const [form, onChange, clear] = useForm({ email: "", password: "" });
   const history = useHistory();
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    signIn(form, clear, history);
+    signIn(form, clear, history, setButtonSignOut);
   };
 
   return (
