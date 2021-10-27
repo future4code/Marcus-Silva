@@ -8,7 +8,7 @@ const SignUpForm = () => {
   const history = useHistory();
 
   const [form, onChange, clear] = useForm({
-    nome: "",
+    username: "",
     email: "",
     password: "",
   });
@@ -26,8 +26,8 @@ const SignUpForm = () => {
           <Input
             placeholder="Nome"
             type="text"
-            name={"nome"}
-            value={form.nome}
+            name={"username"}
+            value={form.username}
             onChange={onChange}
             required
           />

@@ -26,6 +26,7 @@ export const signUp = (body, clear, history) => {
       goToFeedPage(history);
     })
     .catch((err) => {
-      alert(err.response);
+      // alert(err.response);
+      console.log(err.response);
     });
 };
