@@ -1,13 +1,16 @@
 import React from "react";
 import { BtnSignIn, Input, TextField } from "./styled";
 import useForm from "../../hooks/useForm";
+import { signIn } from "../../services/user";
+import { useHistory } from "react-router";
 
 const SignInForm = () => {
   const [form, onChange, clear] = useForm({ email: "", password: "" });
+  const history = useHistory();
 
   const onSubmitForm = (event) => {
     event.preventDefault();
-    console.log(form);
+    signIn(form, clear, history);
   };
 
   return (
