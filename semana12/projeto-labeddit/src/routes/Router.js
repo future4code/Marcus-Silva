@@ -21,7 +21,7 @@ const Router = ({ setButtonSignOut }) => {
         <FeedPage />
       </Route>
 
-      <Route exact path="/posts">
+      <Route exact path="/posts/:id">
         <PostsPage />
       </Route>
 

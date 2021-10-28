@@ -8,6 +8,10 @@ export const FeedPaegContainer = styled.div`
   padding: 2em;
 `;
 
+export const TextField = styled.div`
+  margin-bottom: 10px;
+`;
+
 export const WriteYourPost = styled.textarea`
   width: 380px;
   height: 100px;
@@ -41,9 +45,11 @@ export const Card = styled.div`
 
 export const User = styled.p`
   text-algin: center;
+  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
   padding: 0.5em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -53,6 +59,7 @@ export const User = styled.p`
 export const TextPost = styled.div`
   height: auto;
   padding: 0.3em;
+  text-align: center;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #000;
@@ -80,4 +87,11 @@ export const InputComments = styled.input`
   width: 100%;
   padding: 0.3em;
   border: none;
+`;
+
+export const Like = styled.div`
+  cursor: pointer;
+`;
+export const Dislike = styled.div`
+  cursor: pointer;
 `;

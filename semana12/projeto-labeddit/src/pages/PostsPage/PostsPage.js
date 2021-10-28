@@ -6,7 +6,7 @@ const PostPage = () => {
 
   return (
     <div>
-      <h1>página de posts</h1>
+      <h1>página do post</h1>
     </div>
   );
 };
