@@ -75,7 +75,7 @@ export const Interactions = styled.div`
   border-bottom-color: #000;
 `;
 
-export const LikeDislike = styled.div`
+export const Votes = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,9 +89,30 @@ export const InputComments = styled.input`
   border: none;
 `;
 
-export const Like = styled.div`
+export const UpVote = styled.div`
   cursor: pointer;
 `;
-export const Dislike = styled.div`
+export const DownVote = styled.div`
   cursor: pointer;
+`;
+export const VoteCount = styled.div`
+  color: var(--secondaryColor);
+`;
+
+export const Comment = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+`;
+
+export const CommentCount = styled.div`
+  background-color: #f8f8f8;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
 `;

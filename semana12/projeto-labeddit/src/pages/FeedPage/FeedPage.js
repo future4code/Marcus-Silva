@@ -5,15 +5,18 @@ import {
   BtnPost,
   BtnPostBox,
   Card,
-  Dislike,
+  Comment,
+  CommentCount,
+  DownVote,
   FeedPaegContainer,
   InputComments,
   Interactions,
-  Like,
-  LikeDislike,
   TextField,
   TextPost,
+  UpVote,
   User,
+  VoteCount,
+  Votes,
   WriteYourPost,
 } from "./styled";
 import useRequestData from "../../hooks/useRequestData";
@@ -42,11 +45,16 @@ const FeedPage = () => {
         </User>
         <TextPost>{post.body}</TextPost>
         <Interactions>
-          <LikeDislike>
-            <Like>👍</Like>
-            <Dislike>👎</Dislike>
-          </LikeDislike>
-          <p>Comentários</p>
+          <Votes>
+            <UpVote>↑</UpVote>
+            <VoteCount>{post.voteSum}</VoteCount>
+            <DownVote>↓</DownVote>
+          </Votes>
+
+          <Comment>
+            <CommentCount>{post.commentCount}</CommentCount>
+            <p>Comentários</p>
+          </Comment>
         </Interactions>
 
         <InputComments placeholder="Deixei seu comentário" />
