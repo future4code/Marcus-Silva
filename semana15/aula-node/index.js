@@ -1,4 +1,4 @@
-// 1 a) node index.js nome
+// 1 a) process.argv[n]
 // 1 b)
 
 function recebeNomeEIdade(nome, idade) {
