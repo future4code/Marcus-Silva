@@ -1,0 +1,16 @@
+{
+  "name": "aula-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "clear && node ./index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "ex3": "clear && node ./index.js"
+  },
+  "keywords": [
+    "node"
+  ],
+  "author": "\"Marcus Silva\"",
+  "license": "ISC"
+}
