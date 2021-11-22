@@ -19,3 +19,9 @@
 - e) Erro 1292. O valor da data está incorreto. | Falta colcoar as aspas na data.
 
 ## Exercício 3
+
+- c) O resultado foi Null, pois não havia nenhum "invalid" contido em gender.
+
+- e) Coluna desconhecida "nome".
+
+## Exercício 4
