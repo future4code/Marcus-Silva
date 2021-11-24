@@ -9,12 +9,4 @@
 
 -- d) ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
 
--- Exercício 2
-
--- a)
-UPDATE Actor
-SET name = "John Doe",
-birth_date = CURDATE()
-WHERE Actor.id = "003";
-
 ```
