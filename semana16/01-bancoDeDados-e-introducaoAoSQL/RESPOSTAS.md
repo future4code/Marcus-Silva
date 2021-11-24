@@ -23,5 +23,3 @@
 - c) O resultado foi Null, pois não havia nenhum "invalid" contido em gender.
 
 - e) Coluna desconhecida "nome".
-
-## Exercício 4

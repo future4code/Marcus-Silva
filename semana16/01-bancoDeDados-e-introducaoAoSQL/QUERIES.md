@@ -94,4 +94,71 @@ SELECT * FROM Actor WHERE name LIKE "%G%" OR name LIKE "%g%";
 SELECT * FROM Actor
 WHERE (name LIKE "%A%" OR name LIKE "%a%" OR name LIKE "%G%" OR name LIKE "%g%") AND salary BETWEEN 300000 AND 900000;
 
+-- Exercício 5
+
+CREATE TABLE Movies (
+	id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    sinopse TEXT(255) NOT NULL,
+    release_date DATE NOT NULL,
+    rating FLOAT NOT NULL
+);
+
+INSERT INTO Movies (id, name, sinopse, release_date, rating)
+VALUES(
+	"001",
+    "Se Eu Fosse Você",
+	"Cláudio e Helena são casados há muitos anos e enfrentam a rotina do casamento.
+    Um dia eles são atingidos por um fenômeno inexplicável e trocam de corpos",
+    "2006/01/06",
+    7
+);
+
+INSERT INTO Movies (id, name, sinopse, release_date, rating)
+VALUES(
+	"002",
+    "Doce de Mãe",
+    "Sinopse: `Dona Picucha, uma animada senhora de 85 anos, sempre causa grandes confusões.
+    A vida dela e dos seus quatro filhos sofre uma reviravolta depois que Zaida, empregada e amiga de Dona Picucha,
+    anuncia que vai se casar e não poderá mais morar com ela.",
+    "2012/12/27",
+    10
+);
+
+INSERT INTO Movies (id, name, sinopse, release_date, rating)
+VALUES(
+	"003",
+    "Dona Flor e Seus Dois Maridos",
+    "Dona Flor é uma sedutora professora de culinária casada com Vadinho, que só quer saber de farras e jogatina nas boates.
+    A vida de abusos acaba por acarretar sua morte precoce.",
+    "2017/11/02",
+    8
+);
+
+-- a)
+SELECT id, name, rating from Movies WHERE id = "003";
+
+-- b)
+SELECT name from Movies WHERE name = "Doce de Mãe";
+
+-- c)
+SELECT id, name, sinopse from Movies WHERE rating > 7;
+
+-- Exercício 7
+
+-- a)
+SELECT * FROM Movies WHERE name LIKE "%vida%";
+
+-- b)
+SELECT * FROM Movies WHERE name LIKE "%vida%" OR sinopse LIKE "%vida%";
+
+-- c)
+SELECT * FROM Movies WHERE release_date < "2021-11-23";
+
+-- d)
+SELECT * FROM Movies
+WHERE release_date < CURDATE() AND
+      (name LIKE "%quer%" OR
+      sinopse LIKE "%quer%") AND rating > 7;
+
 ```
