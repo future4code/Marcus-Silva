@@ -1,0 +1,2 @@
+1 a) O método GET
+1 b) /users
