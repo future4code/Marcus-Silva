@@ -7,6 +7,7 @@ const app: Express = express();
 app.use(express.json());
 app.use(cors());
 
+// endpoint para testar o servidor
 app.get("/", (req, res) => {
   res.send("hello from express!");
 });
