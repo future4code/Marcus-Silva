@@ -9,4 +9,12 @@
 
   -- d) ALTER TABLE Actor CHANGE gender gender VARCHAR(100);
 
+  -- Exercício 5
+
+  -- a) Todos os gêneros que não foram removidos da tabela são contados e aparecem em um linha da tabela
+
+  -- Exercício 6
+
+  -- d) Não ocorreu erro no output, mas a linha dessa id nao foi afetada, pois já não existia mais no BD (?)
+
 ```
