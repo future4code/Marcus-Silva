@@ -13,3 +13,18 @@ export const connection = knex({
     port: Number(process.env.DB_PORT || "3306"),
   },
 });
+
+const Users = "User";
+
+// função responsável por salvar usuários no BD
+const createUser = async (id: string, email: string, password: string) => {
+  await connection
+    .insert({
+      id,
+      email,
+      password,
+    })
+    .into(Users);
+};
+
+export default createUser;
