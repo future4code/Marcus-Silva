@@ -1,4 +1,4 @@
-import { app } from "./controllers/app";
+import { app } from "./controller/app";
 
 app.get("/", (req, res) => {
   res.send("hello");
