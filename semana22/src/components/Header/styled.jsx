@@ -49,7 +49,15 @@ export const ContainerHeader = styled.header`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 40vh;
+    height: 50vh;
+    gap: 30px;
+`;
+
+export const ContainerButtons = styled.div`
+    padding: 0 10em;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 45px;
 `;
 
 export const Buttons = styled.button`
@@ -60,4 +68,12 @@ export const Buttons = styled.button`
     :focus {
         border: none;
     }
+`;
+
+export const DivBtn = styled.div`
+    /* background-color: pink; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 `;

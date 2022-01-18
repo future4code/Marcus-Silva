@@ -1,8 +1,10 @@
 import React from "react";
 import {
     Buttons,
+    ContainerButtons,
     ContainerHeader,
     InputSearchContainer,
+    DivBtn,
     Nav,
     NavFirstContainer,
     ProfilePic,
@@ -29,96 +31,97 @@ const Header = () => {
             </Nav>
 
             <ContainerHeader>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab
-                    excepturi reprehenderit commodi itaque accusantium dolores.
-                </p>
+                <h2>
+                    Milhões de filmes, séries e pessoas para descobrir. Explore
+                    já.
+                </h2>
 
-                <div>
-                    <label htmlFor="">
-                        Comédia
+                <h3>Filtre por:</h3>
+                <ContainerButtons>
+                    <DivBtn>
+                        <label>Comédia</label>
                         <Buttons>
-                            <img src="https://img.icons8.com/doodle/48/000000/comedy--v2.png" />
+                            <img src="https://img.icons8.com/external-wanicon-lineal-color-wanicon/48/000000/external-smile-emoji-wanicon-lineal-color-wanicon.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Ação
+                    <DivBtn>
+                        <label>Ação</label>
                         <Buttons>
                             <img src="https://img.icons8.com/doodle/48/000000/boom.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Super Heróis
+                    <DivBtn>
+                        <label>Super Heróis</label>
                         <Buttons>
                             <img src="https://img.icons8.com/doodle/48/000000/iron-man.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Ficção Científica
+                    <DivBtn>
+                        <label>Ficção Científica</label>
                         <Buttons>
                             <img src="https://img.icons8.com/doodle/48/000000/sci-fi.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Fantasia
+                    <DivBtn>
+                        <label>Fantasia</label>
                         <Buttons>
                             <img src="https://img.icons8.com/doodle/48/000000/fantasy.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Terror
+                    <DivBtn>
+                        <label>Terror</label>
                         <Buttons>
                             <img src="https://img.icons8.com/doodle/48/000000/scream.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Musical
+                    <DivBtn>
+                        <label>Musical</label>
                         <Buttons>
                             <img src="https://img.icons8.com/dusk/48/000000/musical.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Romance
+                    <DivBtn>
+                        <label>Romance</label>
                         <Buttons>
                             <img src="https://img.icons8.com/office/48/000000/romantic-movies.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Ação
+                    <DivBtn>
+                        <label>Ação</label>
                         <Buttons>
                             <img src="https://img.icons8.com/external-flat-icons-maxicons/48/000000/external-action-movie-flat-flat-icons-maxicons-3.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Crime
+                    <DivBtn>
+                        <label>Crime</label>
                         <Buttons>
                             <img src="https://img.icons8.com/external-filled-outline-icons-maxicons/48/000000/external-crime-movie-filled-outline-filled-outline-icons-maxicons.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Família
+                    <DivBtn>
+                        <label>Família</label>
                         <Buttons>
                             <img src="https://img.icons8.com/external-flat-icons-maxicons/48/000000/external-cinema-movie-flat-flat-icons-maxicons.png" />
                         </Buttons>
-                    </label>
+                    </DivBtn>
 
-                    <label htmlFor="">
-                        Drama
+                    <DivBtn>
+                        <label>Drama</label>
                         <Buttons>
                             <img src="https://img.icons8.com/office/48/000000/drama.png" />
                         </Buttons>
-                    </label>
-                </div>
+                    </DivBtn>
+                </ContainerButtons>
             </ContainerHeader>
         </div>
     );
