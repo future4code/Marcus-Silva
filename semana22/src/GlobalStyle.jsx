@@ -38,6 +38,12 @@ const GlobalStyle = createGlobalStyle`
     #root, #__next {
         isolation: isolate;
     }
+
+    .bssearch {
+        position: absolute;
+        left: 18px;
+        top: 14px;
+    }
 `;
 
 export default GlobalStyle;

@@ -21,6 +21,7 @@ export const Search = styled.input`
     border-radius: 25px;
     font-size: 1.2rem;
     padding: 0.3em 1em;
+    padding-left: 2.3em;
     width: 400px;
     outline: 0;
     :focus {
@@ -28,12 +29,11 @@ export const Search = styled.input`
     }
 `;
 
-export const ContainerHeader = styled.header`
-    background-color: #f8f8f8;
+export const InputSearchContainer = styled.div`
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 40vh;
 `;
 
 export const ProfilePic = styled.div`
@@ -41,4 +41,23 @@ export const ProfilePic = styled.div`
     width: 60px;
     height: 60px;
     border-radius: 50%;
+`;
+
+export const ContainerHeader = styled.header`
+    background-color: #f8f8f8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 40vh;
+`;
+
+export const Buttons = styled.button`
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    cursor: pointer;
+    :focus {
+        border: none;
+    }
 `;
