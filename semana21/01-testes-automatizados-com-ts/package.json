@@ -1,0 +1,27 @@
+{
+  "name": "01-testes-automatizados-com-ts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/index.ts",
+    "demo-test": "ts-node-dev --transpile-only --ignore-watch node_modules ./src/tests.ts",
+    "test": "clear && jest",
+    "start": "tsc && node ./build/src/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "jest": "^27.4.7",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8"
+  }
+}
