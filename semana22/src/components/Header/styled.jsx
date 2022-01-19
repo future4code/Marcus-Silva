@@ -51,6 +51,7 @@ export const ContainerHeader = styled.header`
     flex-direction: column;
     height: 50vh;
     gap: 30px;
+    text-align: center;
 `;
 
 export const ContainerButtons = styled.div`
@@ -71,9 +72,15 @@ export const Buttons = styled.button`
 `;
 
 export const DivBtn = styled.div`
-    /* background-color: pink; */
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+`;
+
+export const Label = styled.label`
+    color: #323232;
+    font-weight: bold;
+    margin-bottom: 10px;
 `;

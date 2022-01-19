@@ -8,8 +8,14 @@ export const CardContainer = styled.div`
 `;
 
 export const Card = styled.div`
-    background-color: pink;
+    /* background-color: pink; */
     width: 300px;
-    height: 400px;
+    height: 100%;
     margin: 0 auto;
+    margin-bottom: 30px;
+    text-align: center;
+`;
+
+export const MovieTitle = styled.h3`
+    padding: 5px 0;
 `;
