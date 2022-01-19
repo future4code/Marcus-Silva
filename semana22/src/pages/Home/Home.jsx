@@ -20,12 +20,6 @@ const Home = () => {
 
     return (
         <CardContainer>
-            {/* <Card>
-                <div>Filme</div>
-                <p>Nome do filme</p>
-                <p>Data</p>
-            </Card> */}
-
             {movies &&
                 movies.map((movie, index) => {
                     return (
