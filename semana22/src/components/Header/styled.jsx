@@ -5,7 +5,7 @@ export const Nav = styled.nav`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 10vh;
+    height: 100px;
     padding: 0 2em;
 `;
 
@@ -16,12 +16,15 @@ export const NavFirstContainer = styled.div`
     width: 600px;
 `;
 
+export const Title = styled.h1`
+    text-align: center;
+`;
+
 export const Search = styled.input`
     border: 1px solid #dcdccd;
     border-radius: 25px;
     font-size: 1.2rem;
     padding: 0.3em 1em;
-    padding-left: 2.3em;
     width: 400px;
     outline: 0;
     :focus {
@@ -30,7 +33,6 @@ export const Search = styled.input`
 `;
 
 export const InputSearchContainer = styled.div`
-    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,7 +51,7 @@ export const ContainerHeader = styled.header`
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    height: 50vh;
+    height: 500px;
     gap: 30px;
     text-align: center;
 `;

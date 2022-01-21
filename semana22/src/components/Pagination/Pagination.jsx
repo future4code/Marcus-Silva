@@ -1,15 +1,10 @@
 import React, { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
-import { GrPrevious } from "react-icons/gr";
-import { GrNext } from "react-icons/gr";
-import { StyledPaginateContainer } from "./styled";
 import axios from "axios";
 import { API_KEY, BASE_URL } from "../../constants/urls";
 
 const Pagination = () => {
-    const [items, setItems] = useState([]);
-
-    console.log(items);
+    const [page, setPage] = useState([]);
 
     // useEffect(() => {
     //     axios
@@ -26,25 +21,37 @@ const Pagination = () => {
         console.log(data.selected);
     };
 
+    const changePage = ({ selected }) => {
+        setPage(selected);
+    };
+
     const arrows = {
         cursor: "pointer",
     };
 
     return (
-        <StyledPaginateContainer>
+        <div>
             <ReactPaginate
-                previousLabel={<GrPrevious style={arrows} />}
+                previousLabel={"Previous"}
                 breakLabel="..."
-                nextLabel={<GrNext style={arrows} />}
+                nextLabel={"Next"}
                 onPageChange={handlePageClick}
-                pageRangeDisplayed={5}
-                pageCount={15}
-                renderOnZeroPageCount={null}
-                containerClassName="pagination"
+                pageCount={25}
+                marginPagesDisplayed={2}
+                pageRangeDisplayed={3}
+                onPageChange={changePage}
+                containerClassName="pagination justify-content-center pagination-lg"
+                pageClassName="page-item"
+                pageLinkClassName="page-link"
+                previousClassName="page-item"
+                previousLinkClassName="page-link"
+                nextClassName="page-item"
+                nextLinkClassName="page-link"
+                breakClassName="page-item"
+                breakLinkClassName="page-link"
                 activeClassName="active"
-                pageClassName="li"
             />
-        </StyledPaginateContainer>
+        </div>
     );
 };
 

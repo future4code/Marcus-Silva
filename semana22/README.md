@@ -6,3 +6,4 @@
 -   axios
 -   react-icons
 -   react-paginate
+-   Bootstrap

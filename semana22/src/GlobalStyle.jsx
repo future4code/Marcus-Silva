@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
-    /* Custom  CSS reset by Josh W. Comeau https://www.joshwcomeau.com/css/custom-css-reset/ */
+    /* I made some changes, but you can find this Custom CSS Reset here https://www.joshwcomeau.com/css/custom-css-reset/ */
 
    
     *, *::before, *::after {
@@ -10,10 +10,10 @@ const GlobalStyle = createGlobalStyle`
 
     * {
         margin: 0;
+        padding: 0;
     }
 
     html, body {
-        height: 100%;
         scroll-behavior: smooth;
     }
 
@@ -38,12 +38,6 @@ const GlobalStyle = createGlobalStyle`
 
     #root, #__next {
         isolation: isolate;
-    }
-
-    .bssearch {
-        position: absolute;
-        left: 18px;
-        top: 14px;
     }
 `;
 

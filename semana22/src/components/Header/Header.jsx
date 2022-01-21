@@ -10,18 +10,16 @@ import {
     ProfilePic,
     Search,
     Label,
+    Title,
 } from "./styled";
-import { BsSearch } from "react-icons/bs";
 
 const Header = () => {
     return (
         <div>
             <Nav>
                 <NavFirstContainer>
-                    <h1>TMDB</h1>
-
+                    <Title>TMDB</Title>
                     <InputSearchContainer>
-                        <BsSearch className="bssearch" />
                         <Search type="search" placeholder="Busca" />
                     </InputSearchContainer>
                 </NavFirstContainer>
