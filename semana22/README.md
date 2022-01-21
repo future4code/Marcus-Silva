@@ -5,3 +5,4 @@
 -   styled-components
 -   axios
 -   react-icons
+-   react-paginate
