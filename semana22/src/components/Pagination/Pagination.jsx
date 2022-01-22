@@ -30,7 +30,7 @@ const Pagination = () => {
     };
 
     return (
-        <div>
+        <div aria-label="Page navigation example">
             <ReactPaginate
                 previousLabel={"Previous"}
                 breakLabel="..."
@@ -40,7 +40,7 @@ const Pagination = () => {
                 marginPagesDisplayed={2}
                 pageRangeDisplayed={3}
                 onPageChange={changePage}
-                containerClassName="pagination justify-content-center pagination-lg"
+                containerClassName="pagination justify-content-center pagination"
                 pageClassName="page-item"
                 pageLinkClassName="page-link"
                 previousClassName="page-item"
