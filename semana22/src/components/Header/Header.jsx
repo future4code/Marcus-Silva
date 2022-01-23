@@ -5,7 +5,7 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-light bg-light">
                 <div className="container-fluid">
-                    <a className="navbar-brand">TMDB</a>
+                    <a className="navbar-brand text-primary">TMDB</a>
                     <form className="d-flex">
                         <input
                             className="form-control me-2"
@@ -20,7 +20,7 @@ const Header = () => {
                 </div>
             </nav>
 
-            <div className="container">
+            <div className="container py-5">
                 <div className="row">
                     <div>
                         <h1 className="text-center">

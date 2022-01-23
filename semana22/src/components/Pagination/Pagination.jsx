@@ -6,27 +6,12 @@ import { API_KEY, BASE_URL } from "../../constants/urls";
 const Pagination = () => {
     const [page, setPage] = useState([]);
 
-    // useEffect(() => {
-    //     axios
-    //         .get(`${BASE_URL}/movie/popular/lists${API_KEY}`)
-    //         .then((response) => {
-    //             setItems(response.data.results);
-    //         })
-    //         .catch((error) => {
-    //             console.error(error.message);
-    //         });
-    // }, []);
-
     const handlePageClick = (data) => {
         console.log(data.selected);
     };
 
     const changePage = ({ selected }) => {
         setPage(selected);
-    };
-
-    const arrows = {
-        cursor: "pointer",
     };
 
     return (
