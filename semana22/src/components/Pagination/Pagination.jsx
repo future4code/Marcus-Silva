@@ -5,6 +5,25 @@ import { API_KEY, BASE_URL } from "../../constants/urls";
 
 const Pagination = () => {
     const [page, setPage] = useState([]);
+    const [itemsPerPage, setItemsPerPage] = useState(20);
+    const [currentPage, setCurrentPage] = useState(0);
+
+    const pages = Math.ceil(page.length / itemsPerPage);
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const currentItems = page.slice(startIndex, endIndex);
+
+    useEffect(() => {
+        axios
+            .get(`${BASE_URL}/movie/popular${API_KEY}`)
+            .then((response) => {
+                console.log(response.data.results);
+                setPage(response.data.results);
+            })
+            .catch((error) => {
+                console.log(error.message);
+            });
+    }, []);
 
     const handlePageClick = (data) => {
         console.log(data.selected);
@@ -35,6 +54,7 @@ const Pagination = () => {
                 breakClassName="page-item"
                 breakLinkClassName="page-link"
                 activeClassName="active"
+                onClick={setCurrentPage}
             />
         </div>
     );
