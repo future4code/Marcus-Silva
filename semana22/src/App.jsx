@@ -10,7 +10,6 @@ const App = () => {
             <GlobalStyle />
             <Header />
             <Home />
-            <Pagination />
         </div>
     );
 };
