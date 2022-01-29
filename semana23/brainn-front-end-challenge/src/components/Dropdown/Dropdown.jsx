@@ -1,7 +1,7 @@
 const Dropdown = () => {
     return (
-        <div>
-            <div className="dropdown">
+        <div className="w-50 p-3 h-100 d-flex flex-column  justify-content-between">
+            <div className="dropdown ">
                 <button
                     className="btn btn-secondary dropdown-toggle"
                     type="button"
@@ -9,28 +9,57 @@ const Dropdown = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    Dropdown button
+                    Selecione uma opção
                 </button>
+
                 <ul
                     className="dropdown-menu"
                     aria-labelledby="dropdownMenuButton1"
                 >
                     <li>
                         <a className="dropdown-item" href="#">
-                            Action
+                            Mega-sena
                         </a>
                     </li>
+
                     <li>
                         <a className="dropdown-item" href="#">
-                            Another action
+                            Quina
                         </a>
                     </li>
+
                     <li>
                         <a className="dropdown-item" href="#">
-                            Something else here
+                            Lotofácil
+                        </a>
+                    </li>
+
+                    <li>
+                        <a className="dropdown-item" href="#">
+                            Lotomania
+                        </a>
+                    </li>
+
+                    <li>
+                        <a className="dropdown-item" href="#">
+                            Timemania
+                        </a>
+                    </li>
+
+                    <li>
+                        <a className="dropdown-item" href="#">
+                            Dia de sorte
                         </a>
                     </li>
                 </ul>
+            </div>
+
+            <div>
+                <h2>Mega-sena</h2>
+            </div>
+
+            <div>
+                <p>Concurso número 000</p>
             </div>
         </div>
     );
