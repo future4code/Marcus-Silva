@@ -1,11 +1,11 @@
-import Sidebar from "./components/Sidebar/Sidebar";
+import Home from "./pages/Home/Home";
 import GlobalStyle from "./styles/GlobalStyle";
 
 const App = () => {
     return (
         <div>
             <GlobalStyle />
-            <Sidebar />
+            <Home />
         </div>
     );
 };
