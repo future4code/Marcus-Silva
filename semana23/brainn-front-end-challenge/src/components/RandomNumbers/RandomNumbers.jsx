@@ -1,41 +1,40 @@
 import { useState } from "react";
 import { Circle } from "./styled";
-import { animated, useSpring } from "react-spring";
 
 const RandomNumbers = () => {
-    const [random, setRandom] = useState(60);
+    const [random, setRandom] = useState([]);
 
-    const props = useSpring({ val: random, from: { val: 0 } });
+    const handleRandomNumber = () => {
+        const arr = [];
 
-    const randomNumber = Math.floor(Math.random() * 60) + 1;
+        while (arr.length < 6) {
+            const randomNumber = Math.floor(Math.random() * 60) + 1;
+
+            if (arr.indexOf(randomNumber) === -1) {
+                arr.push(randomNumber);
+            }
+        }
+
+        setRandom(arr);
+    };
+
+    const generate = random.map((num, index) => {
+        return (
+            <div key={index}>
+                <Circle>
+                    <p>{num}</p>
+                </Circle>
+            </div>
+        );
+    });
 
     return (
-        <div className="d-flex">
-            <Circle>
-                <animated.p>
-                    {props.val.to((val) => Math.floor(val))}
-                </animated.p>
-            </Circle>
+        <div>
+            <div>
+                <button onClick={handleRandomNumber}>Generate Numbers</button>
+            </div>
 
-            <Circle>
-                <p>00</p>
-            </Circle>
-
-            <Circle>
-                <p>00</p>
-            </Circle>
-
-            <Circle>
-                <p>00</p>
-            </Circle>
-
-            <Circle>
-                <p>00</p>
-            </Circle>
-
-            <Circle>
-                <p>00</p>
-            </Circle>
+            <div className="d-flex">{generate}</div>
         </div>
     );
 };
