@@ -21,36 +21,6 @@ const Dropdown = () => {
                             Mega-sena
                         </a>
                     </li>
-
-                    <li>
-                        <a className="dropdown-item" href="#">
-                            Quina
-                        </a>
-                    </li>
-
-                    <li>
-                        <a className="dropdown-item" href="#">
-                            Lotofácil
-                        </a>
-                    </li>
-
-                    <li>
-                        <a className="dropdown-item" href="#">
-                            Lotomania
-                        </a>
-                    </li>
-
-                    <li>
-                        <a className="dropdown-item" href="#">
-                            Timemania
-                        </a>
-                    </li>
-
-                    <li>
-                        <a className="dropdown-item" href="#">
-                            Dia de sorte
-                        </a>
-                    </li>
                 </ul>
             </div>
 
