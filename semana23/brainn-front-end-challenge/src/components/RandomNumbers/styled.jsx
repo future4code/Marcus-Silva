@@ -9,3 +9,7 @@ export const Circle = styled.div`
     align-items: center;
     justify-content: center;
 `;
+
+export const Span = styled.span`
+    font-size: 2rem;
+`;
