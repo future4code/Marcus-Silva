@@ -1,0 +1,18 @@
+{
+    "name": "03-checa-parenteses-validos",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "ts-node-dev ./src/exercise-3.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/node": "^17.0.14",
+        "ts-node-dev": "^1.1.8",
+        "typescript": "^4.5.5"
+    }
+}
