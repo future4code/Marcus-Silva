@@ -9,7 +9,7 @@ import { Circle, Span } from "../RandomNumbers/styled";
 
 const Dropdown = () => {
     const [selected, setSelected] = useState([]);
-    const [id, setId] = useState();
+    const [mostraConcurso, setMostraConcurso] = useState({});
     const [concursos, setConcursos] = useState([]);
     const [concursoSelecionado, setConcursoSelecionado] = useState({});
 
@@ -36,11 +36,11 @@ const Dropdown = () => {
     }, []);
 
     useEffect(() => {
-        console.log(id);
-        if (id !== undefined) {
+        console.log(mostraConcurso);
+        if (mostraConcurso.id !== undefined) {
             console.log(concursos);
             const concurso = concursos.find((item) => {
-                return item.loteriaId === id;
+                return item.loteriaId === mostraConcurso.id;
             });
 
             axios
@@ -53,10 +53,10 @@ const Dropdown = () => {
                     console.error(err.message);
                 });
         }
-    }, [id]);
+    }, [mostraConcurso]);
 
-    const onChangeValue = (id) => {
-        setId(id);
+    const onChangeValue = (mostraConcurso) => {
+        setMostraConcurso(mostraConcurso);
     };
 
     return (
@@ -69,7 +69,7 @@ const Dropdown = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                 >
-                    Selecione uma opção
+                    {mostraConcurso.nome || "Selecione uma opção"}
                 </button>
 
                 <ul
@@ -80,7 +80,8 @@ const Dropdown = () => {
                         return (
                             <li
                                 key={index}
-                                onClick={() => onChangeValue(item.id)}
+                                onClick={() => onChangeValue(item)}
+                                value={item}
                             >
                                 <a className="dropdown-item" href="#">
                                     {item.nome}
@@ -95,13 +96,13 @@ const Dropdown = () => {
                 concursoSelecionado.numeros.map((item, index) => {
                     return (
                         <Circle key={index}>
-                            <Span>{item.numeros}</Span>
+                            <Span>{item}</Span>
                         </Circle>
                     );
                 })}
 
             <div>
-                <h2>Mega-sena</h2>
+                <h2>{mostraConcurso.nome}</h2>
             </div>
 
             <div>
