@@ -5,7 +5,7 @@ import {
     CONCURSO_URL,
     LOTERIA_CONCURSOS_URL,
 } from "../../constants/urls";
-import { Circle } from "../RandomNumbers/styled";
+import { Circle, Span } from "../RandomNumbers/styled";
 
 const Dropdown = () => {
     const [selected, setSelected] = useState([]);
@@ -91,9 +91,14 @@ const Dropdown = () => {
                 </ul>
             </div>
 
-            <Circle>
-                <span>{concursoSelecionado.numeros}</span>
-            </Circle>
+            {concursoSelecionado.numeros &&
+                concursoSelecionado.numeros.map((item, index) => {
+                    return (
+                        <Circle key={index}>
+                            <Span>{item.numeros}</Span>
+                        </Circle>
+                    );
+                })}
 
             <div>
                 <h2>Mega-sena</h2>
