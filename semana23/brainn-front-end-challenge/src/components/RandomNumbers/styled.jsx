@@ -1,5 +1,12 @@
 import styled from "styled-components";
 
+export const ContainerCircle = styled.div`
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    place-content: center;
+    gap: 15px;
+`;
+
 export const Circle = styled.div`
     background-color: #dcdcdc;
     width: 100px;

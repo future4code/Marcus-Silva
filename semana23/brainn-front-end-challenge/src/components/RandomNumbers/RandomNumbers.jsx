@@ -1,12 +1,17 @@
-import { Circle, Span } from "./styled";
+import { Circle, ContainerCircle, Span } from "./styled";
 
-const RandomNumbers = () => {
+const RandomNumbers = ({ concursoSelecionado }) => {
     return (
-        <div>
-            <Circle>
-                <Span>00</Span>
-            </Circle>
-        </div>
+        <ContainerCircle>
+            {concursoSelecionado.numeros &&
+                concursoSelecionado.numeros.map((item, index) => {
+                    return (
+                        <Circle key={index}>
+                            <Span>{item}</Span>
+                        </Circle>
+                    );
+                })}
+        </ContainerCircle>
     );
 };
 
