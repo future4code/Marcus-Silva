@@ -1,6 +1,6 @@
 import { Circle, ContainerCircle, Span } from "./styled";
 
-const RandomNumbers = ({ concursoSelecionado }) => {
+const Lottery = ({ concursoSelecionado }) => {
     return (
         <ContainerCircle>
             {concursoSelecionado.numeros &&
@@ -15,4 +15,4 @@ const RandomNumbers = ({ concursoSelecionado }) => {
     );
 };
 
-export default RandomNumbers;
+export default Lottery;

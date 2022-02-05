@@ -1,7 +1,5 @@
 import { Container } from "./styled";
-import Bg_Web from "../../assets/Images/bg_web.svg";
 import Dropdown from "../../components/Dropdown/Dropdown";
-import RandomNumbers from "../../components/RandomNumbers/RandomNumbers";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import {
@@ -9,6 +7,7 @@ import {
     CONCURSO_URL,
     LOTERIA_CONCURSOS_URL,
 } from "../../constants/urls";
+import Lottery from "../../components/Lottery/Lottery";
 
 const Home = () => {
     const [selected, setSelected] = useState([]);
@@ -47,7 +46,6 @@ const Home = () => {
             axios
                 .get(`${CONCURSO_URL}${concurso.concursoId}`)
                 .then((res) => {
-                    console.log(res.data);
                     setConcursoSelecionado(res.data);
                 })
                 .catch((err) => {
@@ -57,20 +55,13 @@ const Home = () => {
     }, [mostraConcurso]);
 
     return (
-        <Container
-            style={{
-                backgroundImage: `url(${Bg_Web})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center",
-                display: "flex",
-            }}
-        >
+        <Container>
             <Dropdown
                 selected={selected}
                 setMostraConcurso={setMostraConcurso}
                 mostraConcurso={mostraConcurso}
             />
-            <RandomNumbers concursoSelecionado={concursoSelecionado} />
+            <Lottery concursoSelecionado={concursoSelecionado} />
         </Container>
     );
 };

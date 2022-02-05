@@ -1,14 +1,20 @@
 import styled from "styled-components";
 
 export const ContainerCircle = styled.div`
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    place-content: center;
-    gap: 15px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100vh;
+    padding: 1em;
 `;
 
 export const Circle = styled.div`
-    background-color: #dcdcdc;
+    background-color: #fff;
     width: 100px;
     height: 100px;
     border-radius: 50%;

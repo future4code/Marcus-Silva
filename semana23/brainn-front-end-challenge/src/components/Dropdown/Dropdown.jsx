@@ -1,4 +1,4 @@
-import { Circle, Span } from "../RandomNumbers/styled";
+import { Sidebar } from "./styled";
 
 const Dropdown = ({ selected, setMostraConcurso, mostraConcurso }) => {
     const onChangeValue = (mostraConcurso) => {
@@ -6,10 +6,10 @@ const Dropdown = ({ selected, setMostraConcurso, mostraConcurso }) => {
     };
 
     return (
-        <div className="w-50 p-3 h-100 d-flex flex-column  justify-content-between">
-            <div className="dropdown ">
+        <Sidebar>
+            <div className="dropdown mb-3">
                 <button
-                    className="btn btn-secondary dropdown-toggle"
+                    className="btn dropdown-toggle bg-light "
                     type="button"
                     id="dropdownMenuButton1"
                     data-bs-toggle="dropdown"
@@ -39,14 +39,14 @@ const Dropdown = ({ selected, setMostraConcurso, mostraConcurso }) => {
                 </ul>
             </div>
 
-            <div>
+            <div className="mb-3">
                 <h2>{mostraConcurso.nome}</h2>
             </div>
 
             <div>
                 <p>Concurso número 000</p>
             </div>
-        </div>
+        </Sidebar>
     );
 };
 
