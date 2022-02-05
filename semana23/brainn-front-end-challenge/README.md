@@ -1,5 +1,7 @@
 # Brainn
 
+## O case escolhido foi o [Brainn](https://github.com/brainnco-exs/readme-frontend)
+
 ### O que funciona
 
 -   Ao selecionar um jogo, os números sorteados aparecem na tela
