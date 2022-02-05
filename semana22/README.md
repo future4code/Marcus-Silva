@@ -1,9 +1,9 @@
 # Promobit
 
-## Desafio front-end
+## O desafio escolhido foi o [Promobit](https://github.com/Promobit/front-end-challenge)
 
--   styled-components
--   axios
--   react-icons
--   react-paginate
--   Bootstrap
+### Link Surge
+
+[Promobit App](stingy-hate.surge.sh)
+
+### Imagens
