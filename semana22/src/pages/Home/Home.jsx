@@ -8,8 +8,6 @@ const Home = () => {
     const [movies, setMovies] = useState([]);
     const [page, setPage] = useState(0);
 
-    console.log(page);
-
     useEffect(() => {
         axios
             .get(`${BASE_URL}/movie/popular${API_KEY}&page=${page + 1}`)
