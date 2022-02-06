@@ -1,4 +1,4 @@
-import { UserInsertDTO } from "../model/User";
+import { User, UserInsertDTO } from "../model/User";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class UserData extends BaseDatabase {
@@ -18,6 +18,26 @@ export class UserData extends BaseDatabase {
                 .into(UserData.TABLE_NAME);
 
             return "Usuário criado com sucesso!";
+        } catch (error) {
+            if (error instanceof Error) {
+                throw new Error(error.message);
+            } else {
+                throw new Error("Erro do banco de dados");
+            }
+        }
+    }
+
+    async getAllUser() {
+        try {
+            const result: User[] = await this.getconnection()
+                .select("*")
+                .from(UserData.TABLE_NAME);
+
+            const users = result.map((user) => {
+                return User.userModel(user);
+            });
+
+            return result;
         } catch (error) {
             if (error instanceof Error) {
                 throw new Error(error.message);

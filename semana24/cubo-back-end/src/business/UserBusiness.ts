@@ -23,4 +23,11 @@ export class UserBusiness {
 
         return result;
     }
+
+    async alluser() {
+        const userData = new UserData();
+        const result = await userData.getAllUser();
+
+        return result;
+    }
 }
