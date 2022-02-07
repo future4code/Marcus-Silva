@@ -10,7 +10,11 @@ const useForm = (initialValue) => {
         });
     };
 
-    return [form, onChange];
+    const resetForm = () => {
+        setForm(initialValue);
+    };
+
+    return [form, onChange, resetForm];
 };
 
 export default useForm;

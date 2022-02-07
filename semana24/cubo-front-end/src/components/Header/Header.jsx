@@ -1,3 +1,4 @@
+import axios from "axios";
 import useForm from "../../hooks/useForm";
 import {
     Button,
@@ -14,15 +15,32 @@ const Header = () => {
         participation: "",
     };
 
+    const [form, onChange, resetForm] = useForm(initialValue);
+
     const sendData = (e) => {
         e.preventDefault();
+        const { firstName, lastName, participation } = form;
+
+        const body = {
+            firstName,
+            lastName,
+            participation: Number(participation),
+        };
+
+        axios
+            .post("https://cubo-back-end.herokuapp.com/user/create", body)
+            .then((res) => {
+                resetForm();
+                alert(res.data.message);
+            })
+            .catch((err) => {
+                alert(err.message);
+            });
     };
 
-    const [form, onChange] = useForm(initialValue);
-
     return (
-        <HeaderContainer onSubmit={sendData}>
-            <Form>
+        <HeaderContainer>
+            <Form onSubmit={sendData}>
                 <Input
                     name="firstName"
                     placeholder="First name"
