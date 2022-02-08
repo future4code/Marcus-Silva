@@ -9,7 +9,7 @@
 
 ### Link Surge
 
-[Brainn App](whimsical-loss.surge.sh)
+[Brainn App](https://ten-rub.surge.sh/)
 
 ### Imagens
 
