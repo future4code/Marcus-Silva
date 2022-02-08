@@ -1,19 +1,33 @@
 import { useContext } from "react";
 import { GlobalContext } from "../../context/global/GlobalContext";
-import { SectionTable } from "./styled";
+import { SectionTable, TH } from "./styled";
 
 const TableData = () => {
-    const { states, request } = useContext(GlobalContext);
-    console.log(states, request);
+    const { states } = useContext(GlobalContext);
 
     return (
         <SectionTable>
-            <tr>
-                <th></th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Participation</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th></th>
+                    <TH>First Name</TH>
+                    <TH>Last Name</TH>
+                    <TH>Participation</TH>
+                </tr>
+            </thead>
+
+            {states.users.map((user, index) => {
+                return (
+                    <tbody key={index}>
+                        <tr>
+                            <td>{index + 1}</td>
+                            <td>{user.firstName}</td>
+                            <td>{user.lastName}</td>
+                            <td>{user.participation}%</td>
+                        </tr>
+                    </tbody>
+                );
+            })}
         </SectionTable>
     );
 };

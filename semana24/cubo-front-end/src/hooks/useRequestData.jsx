@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export const useRequestData = (initialState, url, config = {}) => {
-    const { data, setData } = useState(initialState);
+    const [data, setData] = useState(initialState);
 
     const request = () => {
         axios

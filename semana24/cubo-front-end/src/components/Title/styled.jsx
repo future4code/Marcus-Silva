@@ -14,6 +14,9 @@ export const H1 = styled.h1`
     font-size: 2rem;
     text-transform: uppercase;
     margin-bottom: 10px;
+    background: -webkit-linear-gradient(#505050, #222222);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 `;
 
 export const H3 = styled.h3`
