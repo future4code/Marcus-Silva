@@ -11,7 +11,7 @@ export const useRequestData = (initialState, url, config = {}) => {
                 setData(res.data);
             })
             .catch((err) => {
-                alert("Ocorreu um erro.", err.message);
+                alert("Ocorreu um erro.");
             });
     };
 

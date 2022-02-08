@@ -4,7 +4,7 @@ import { SectionTable } from "./styled";
 
 const TableData = () => {
     const { states, request } = useContext(GlobalContext);
-    console.log(states);
+    console.log(states, request);
 
     return (
         <SectionTable>
