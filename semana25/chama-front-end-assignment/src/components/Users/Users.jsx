@@ -19,17 +19,15 @@ const Users = () => {
 
     const getUsers = users.map((user, index) => {
         return (
-            <ContainerCards>
-                <Cards key={index}>
-                    <Img src={user.avatar_url} alt="" />
-                    <p>{user.login}</p>
-                    <p>{user.id}</p>
-                </Cards>
-            </ContainerCards>
+            <Cards key={index}>
+                <Img src={user.avatar_url} alt="" />
+                <p>{user.login}</p>
+                <a>{user.html_url}</a>
+            </Cards>
         );
     });
 
-    return <div>{getUsers}</div>;
+    return <ContainerCards>{getUsers}</ContainerCards>;
 };
 
 export default Users;

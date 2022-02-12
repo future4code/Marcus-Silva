@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const ContainerSearch = styled.div`
+export const Form = styled.form`
     display: flex;
     align-items: center;
     justify-content: center;
@@ -48,7 +48,7 @@ export const Input = styled.input`
     }
 `;
 
-export const ButtonSearch = styled.button`
+export const ButtonSearch = styled.input`
     background-color: #65a3e0;
     border-radius: 50px;
     border: none;
@@ -65,6 +65,10 @@ export const ButtonSearch = styled.button`
         background-color: #74ace3;
         outline: 2px solid #74ace3;
         color: #fff;
+    }
+
+    :active {
+        transform: scale(0.9);
     }
 
     @media screen and (max-width: 728px) {
