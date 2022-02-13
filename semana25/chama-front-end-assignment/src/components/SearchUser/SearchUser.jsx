@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { ButtonSearch, Form, Input } from "./styled";
 
 const SearchUser = () => {
-    const [search, setSearch] = useState({});
+    const [search, setSearch] = useState("");
 
     const onChange = (e) => {
         setSearch(e.target.value);
@@ -15,6 +15,7 @@ const SearchUser = () => {
             .get(`https://api.github.com/users/${search}`)
             .then((res) => {
                 console.log(res.data);
+                setSearch(res.data);
             })
             .catch((err) => {
                 console.error(err.message);
