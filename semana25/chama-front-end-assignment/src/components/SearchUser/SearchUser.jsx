@@ -1,30 +1,28 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
 import { ButtonSearch, Form, Input } from "./styled";
 
-const SearchUser = () => {
-    const [search, setSearch] = useState("");
-
+const SearchUser = ({ search, setSearch, searchUsers }) => {
     const onChange = (e) => {
         setSearch(e.target.value);
     };
 
     const onSubmit = (e) => {
         e.preventDefault();
-        axios
-            .get(`https://api.github.com/users/${search}`)
-            .then((res) => {
-                console.log(res.data);
-                setSearch(res.data);
-            })
-            .catch((err) => {
-                console.error(err.message);
-            });
+        if (search === "") {
+            alert("Por favor, insira o nome de algum usuário.");
+        } else {
+            searchUsers(search);
+            setSearch("");
+        }
     };
 
     return (
         <Form onSubmit={onSubmit}>
-            <Input type="search" placeholder="Username" onChange={onChange} />
+            <Input
+                type="search"
+                placeholder="Username"
+                onChange={onChange}
+                value={search}
+            />
             <ButtonSearch type="submit" value="Search" />
         </Form>
     );
